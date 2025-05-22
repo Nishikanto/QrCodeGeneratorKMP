@@ -1,0 +1,33 @@
+[versions]
+kotlin = "2.1.0"
+compose = "1.6.10"
+coroutines = "1.7.3"
+zxing-core = "3.5.2"
+androidx-core-ktx = "1.12.0"           # Latest stable, safe for Android
+androidx-activity-compose = "1.8.1"    # Latest stable that works well with Compose 1.6+
+
+[libraries]
+zxing-core = { module = "com.google.zxing:core", version.ref = "zxing-core" }
+kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
+coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
+
+# JetBrains Compose Multiplatform (safe for iOS)
+compose-runtime = { module = "org.jetbrains.compose.runtime:runtime", version.ref = "compose" }
+compose-ui = { module = "org.jetbrains.compose.ui:ui", version.ref = "compose" }
+compose-foundation = { module = "org.jetbrains.compose.foundation:foundation", version.ref = "compose" }
+compose-material3 = { module = "org.jetbrains.compose.material3:material3", version.ref = "compose" }
+compose-ui-tooling = { module = "org.jetbrains.compose.ui:ui-tooling", version.ref = "compose" }
+compose-ui-tooling-preview = { module = "org.jetbrains.compose.ui:ui-tooling-preview", version.ref = "compose" }
+
+# ✅ Android-only, safe and up-to-date
+androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "androidx-core-ktx" }
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activity-compose" }
+
+[plugins]
+androidApplication = { id = "com.android.application", version = "8.10.0" }
+androidLibrary = { id = "com.android.library", version = "8.10.0" }
+kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlinCocoapods = { id = "org.jetbrains.kotlin.native.cocoapods", version.ref = "kotlin" }
+compose = { id = "org.jetbrains.compose", version.ref = "compose" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
